@@ -1,5 +1,6 @@
 package com.example.kumparanapp.core.di
 
+import com.example.kumparanapp.feature.post.di.listPostViewModel
 
 
 /**
@@ -7,5 +8,7 @@ package com.example.kumparanapp.core.di
  */
 val appComponent = listOf(
     coreModule,
-    retrofitModule
+    databaseModule,
+    retrofitModule,
+    listPostViewModel
 )

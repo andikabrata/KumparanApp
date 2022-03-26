@@ -7,6 +7,7 @@ import android.view.WindowManager
 import com.example.kumparanapp.MainActivity
 import com.example.kumparanapp.core.base.BaseActivity
 import com.example.kumparanapp.databinding.ActivitySplashScreenBinding
+import com.example.kumparanapp.feature.post.ui.PostActivity
 
 class SplashScreenActivity : BaseActivity<ActivitySplashScreenBinding>() {
     override fun getViewBinding(): ActivitySplashScreenBinding {
@@ -20,7 +21,7 @@ class SplashScreenActivity : BaseActivity<ActivitySplashScreenBinding>() {
         )
 
         Handler().postDelayed({
-            val intent = Intent(this, MainActivity::class.java)
+            val intent = Intent(this, PostActivity::class.java)
             startActivity(intent)
             finish()
         }, 3000)
