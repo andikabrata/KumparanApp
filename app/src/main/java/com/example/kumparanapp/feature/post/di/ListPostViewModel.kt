@@ -26,7 +26,6 @@ class ListPostViewModel(
 ) : BaseViewModel() {
     val listUserLiveData = MutableLiveData<ViewState<List<User>>>()
     val listPostLiveData = MutableLiveData<ViewState<List<Posts>>>()
-    var coba: String? = null
 
     fun getUser() {
         listUserLiveData.setLoading()
@@ -120,7 +119,7 @@ class ListPostViewModel(
                         Lng = it.Lng,
                         Phone = it.Phone,
                         Website = it.Website,
-                        CompanyName = it.Name,
+                        CompanyName = it.CompanyName,
                         CatchPhrase = it.CatchPhrase,
                         Bs = it.Bs
                     )

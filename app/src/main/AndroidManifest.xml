@@ -13,6 +13,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.KumparanApp">
         <activity
+            android:name=".feature.postdetail.ui.DetailPostActivity"
+            android:exported="false" />
+        <activity
             android:name=".feature.post.ui.PostActivity"
             android:exported="false" />
         <activity
@@ -24,9 +27,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name=".MainActivity"
-            android:exported="true" />
     </application>
 
 </manifest>

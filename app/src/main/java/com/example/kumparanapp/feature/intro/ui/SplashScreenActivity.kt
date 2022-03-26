@@ -4,7 +4,6 @@ import android.content.Intent
 import android.os.Bundle
 import android.os.Handler
 import android.view.WindowManager
-import com.example.kumparanapp.MainActivity
 import com.example.kumparanapp.core.base.BaseActivity
 import com.example.kumparanapp.databinding.ActivitySplashScreenBinding
 import com.example.kumparanapp.feature.post.ui.PostActivity

@@ -10,23 +10,22 @@ import com.example.kumparanapp.core.db.entity.UserMirrorEntity
 import com.example.kumparanapp.databinding.ActivityPostBinding
 import com.example.kumparanapp.feature.post.adapter.PostAdapter
 import com.example.kumparanapp.feature.post.di.ListPostViewModel
+import com.example.kumparanapp.feature.postdetail.ui.DetailPostActivity
 
 class PostActivity : BaseVMActivity<ListPostViewModel, ActivityPostBinding>() {
 
-    var listUser: ArrayList<UserEntity> = arrayListOf()
-    var listUserMirror: ArrayList<UserMirrorEntity> = arrayListOf()
-    lateinit var mainHandler: Handler
+    private var listUser: ArrayList<UserEntity> = arrayListOf()
+    private var listUserMirror: ArrayList<UserMirrorEntity> = arrayListOf()
+    private lateinit var mainHandler: Handler
 
-    val adapter by lazy {
+    private val adapter by lazy {
         PostAdapter() {
-            /*startActivity<DetailActivity> {
-                putExtra("title",it.name)
-                putExtra("date",it.first_air_date)
-                putExtra("overview",it.overview)
-                putExtra("image_path",it.poster_path)
-                putExtra("vote_average",it.vote_average)
-            }*/
-            snackBar("COMING SOON")
+            startActivity<DetailPostActivity> {
+                putExtra("id",it.id.toString())
+                putExtra("user_id",it.userId.toString())
+                putExtra("title",it.title)
+                putExtra("body",it.body)
+            }
         }
     }
 
