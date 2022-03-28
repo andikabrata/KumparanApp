@@ -66,6 +66,7 @@ class ListPostViewModel(
                         Username = it.username,
                         Email = it.email,
                         Street = it.address.street,
+                        Suite = it.address.suite,
                         City = it.address.city,
                         Zipcode = it.address.zipcode,
                         Lat = it.address.geo.lat,

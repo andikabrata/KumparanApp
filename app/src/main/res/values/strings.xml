@@ -9,4 +9,12 @@
     <string name="comments">Comments</string>
     <string name="author_name">Author Name</string>
     <string name="body_comment">Body Comment</string>
+    <string name="email">Email</string>
+    <string name="address">Address</string>
+    <string name="street">Street</string>
+    <string name="suite">Suite</string>
+    <string name="city">City</string>
+    <string name="zipcode">Zipcode</string>
+    <string name="album">Album</string>
+    <string name="splash_screen">Splash Screen</string>
 </resources>

@@ -3,6 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:id="@+id/item_layout"
+    android:background="@color/dark_light1"
     android:paddingStart="@dimen/dp_10"
     android:paddingEnd="@dimen/dp_10"
     xmlns:app="http://schemas.android.com/apk/res-auto">

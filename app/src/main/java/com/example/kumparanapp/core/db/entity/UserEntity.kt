@@ -11,6 +11,7 @@ data class UserEntity(
     @ColumnInfo(name = "username") var Username: String?,
     @ColumnInfo(name = "email") var Email: String?,
     @ColumnInfo(name = "street") var Street: String?,
+    @ColumnInfo(name = "suite") var Suite: String?,
     @ColumnInfo(name = "city") var City: String?,
     @ColumnInfo(name = "zipcode") var Zipcode: String?,
     @ColumnInfo(name = "lat") var Lat: String?,

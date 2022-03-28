@@ -6,6 +6,7 @@ import com.example.kumparanapp.core.base.BaseVMActivity
 import com.example.kumparanapp.databinding.ActivityDetailPostBinding
 import com.example.kumparanapp.feature.postdetail.adapter.DetailPostAdapter
 import com.example.kumparanapp.feature.postdetail.di.ListDetailPostViewModel
+import com.example.kumparanapp.feature.userdetail.ui.DetailUserActivity
 import kotlin.text.orEmpty
 
 class DetailPostActivity : BaseVMActivity<ListDetailPostViewModel, ActivityDetailPostBinding>() {
@@ -16,11 +17,6 @@ class DetailPostActivity : BaseVMActivity<ListDetailPostViewModel, ActivityDetai
 
     private val adapter by lazy {
         DetailPostAdapter() {
-            /*startActivity<DetailPostActivity> {
-                putExtra("id",it.userId.toString())
-                putExtra("title",it.title)
-                putExtra("body",it.body)
-            }*/
             snackBar("COOMING SOON")
         }
     }
@@ -53,6 +49,12 @@ class DetailPostActivity : BaseVMActivity<ListDetailPostViewModel, ActivityDetai
         binding.listComment.apply {
             gridLayoutManager(1)
         }
+
+        binding.linearDetailUser.setOnClickListener {
+            startActivity<DetailUserActivity> {
+                putExtra("user_id", userId)
+            }
+        }
     }
 
     override fun observerViewModel() {
@@ -72,7 +74,9 @@ class DetailPostActivity : BaseVMActivity<ListDetailPostViewModel, ActivityDetai
                 }
 
                 is ViewState.Failed -> {
-
+                    binding.stateLayout.toError {
+                        viewModel.getComment(id)
+                    }
                 }
             }
         }

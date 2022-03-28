@@ -4,6 +4,7 @@
     android:id="@+id/item_layout"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    android:background="@color/dark_light1"
     android:paddingStart="@dimen/dp_10"
     android:paddingTop="@dimen/dp_10"
     android:orientation="vertical">
@@ -33,7 +34,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/user_name"
-                android:textColor="@color/black"
+                android:textColor="@color/white"
                 android:textSize="12sp"
                 android:textStyle="bold" />
 
@@ -41,6 +42,7 @@
                 android:id="@+id/tv_company_name"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:textColor="@color/white"
                 android:text="@string/company_name"
                 android:textSize="10sp" />
 
@@ -63,6 +65,7 @@
             android:id="@+id/tv_title"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:textColor="@color/white"
             android:text="@string/title" />
 
         <TextView
@@ -70,6 +73,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
+            android:textColor="@color/white"
             android:text="@string/body" />
 
     </LinearLayout>

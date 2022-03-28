@@ -5,22 +5,24 @@
     android:id="@+id/item_layout"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    tools:context=".feature.postdetail.ui.DetailPostActivity"
-    android:orientation="vertical">
+    android:background="@color/dark_light1"
+    android:orientation="vertical"
+    tools:context=".feature.postdetail.ui.DetailPostActivity">
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
-        android:background="@color/purple_700"
+        android:background="@color/dark_light"
         android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
         app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
 
     <LinearLayout
+        android:id="@+id/linear_detail_user"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/dp_10"
         android:layout_marginLeft="@dimen/dp_10"
+        android:layout_marginTop="@dimen/dp_10"
         android:orientation="horizontal">
 
         <de.hdodenhof.circleimageview.CircleImageView
@@ -34,8 +36,8 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/dp_10"
             android:layout_gravity="center"
+            android:layout_marginStart="@dimen/dp_10"
             android:orientation="vertical">
 
             <TextView
@@ -43,7 +45,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/user_name"
-                android:textColor="@color/black"
+                android:textColor="@color/white"
                 android:textSize="12sp"
                 android:textStyle="bold" />
 
@@ -51,6 +53,7 @@
                 android:id="@+id/tv_company_name"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:textColor="@color/white"
                 android:text="@string/company_name"
                 android:textSize="10sp" />
 
@@ -61,8 +64,8 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/dp_10"
         android:layout_marginStart="20dp"
+        android:layout_marginTop="@dimen/dp_10"
         android:layout_marginEnd="20dp"
         android:layout_marginBottom="20dp"
         android:background="@drawable/border"
@@ -73,14 +76,16 @@
             android:id="@+id/tv_title"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/title" />
+            android:text="@string/title"
+            android:textColor="@color/white" />
 
         <TextView
             android:id="@+id/tv_body"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
-            android:text="@string/body" />
+            android:text="@string/body"
+            android:textColor="@color/white" />
 
     </LinearLayout>
 
@@ -92,9 +97,10 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:text="@string/comments"
             android:textSize="17sp"
-            android:text="@string/comments"/>
+            android:textStyle="bold" />
 
     </LinearLayout>
 

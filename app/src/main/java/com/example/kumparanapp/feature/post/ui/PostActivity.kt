@@ -66,7 +66,9 @@ class PostActivity : BaseVMActivity<ListPostViewModel, ActivityPostBinding>() {
                 }
 
                 is ViewState.Failed -> {
-
+                    binding.stateLayout.toError {
+                        viewModel.getUser()
+                    }
                 }
             }
         }
@@ -113,7 +115,9 @@ class PostActivity : BaseVMActivity<ListPostViewModel, ActivityPostBinding>() {
                 }
 
                 is ViewState.Failed -> {
-
+                    binding.stateLayout.toError {
+                        viewModel.getListPost()
+                    }
                 }
             }
         }

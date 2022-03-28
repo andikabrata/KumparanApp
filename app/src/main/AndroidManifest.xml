@@ -7,11 +7,22 @@
     <application
         android:name=".KumparanApp"
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@mipmap/ic_logo"
         android:label="@string/app_name"
+        android:largeHeap="true"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.KumparanApp">
+        android:theme="@style/Theme.KumparanApp"
+        android:usesCleartextTraffic="true">
+        <activity
+            android:name=".feature.photo.ui.PhotoViewActivity"
+            android:exported="false" />
+        <activity
+            android:name=".feature.photo.ui.PhotoActivity"
+            android:exported="false" />
+        <activity
+            android:name=".feature.userdetail.ui.DetailUserActivity"
+            android:exported="false" />
         <activity
             android:name=".feature.postdetail.ui.DetailPostActivity"
             android:exported="false" />
